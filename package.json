@@ -1,0 +1,25 @@
+{
+  "name": "netlify-qiita",
+  "version": "1.0.0",
+  "description": "package for qiita article",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify-lambda build src/funtions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolwind0202/netlify-funcs-discord-slash-cmds.git"
+  },
+  "author": "coolwind0202",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coolwind0202/netlify-funcs-discord-slash-cmds/issues"
+  },
+  "homepage": "https://github.com/coolwind0202/netlify-funcs-discord-slash-cmds#readme",
+  "dependencies": {
+    "discord-slash-commands-client": "^1.1.1",
+    "netlify-lambda": "^2.0.2",
+    "tweetnacl": "^1.0.3"
+  }
+}
