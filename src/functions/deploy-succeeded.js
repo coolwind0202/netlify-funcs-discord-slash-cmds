@@ -5,7 +5,6 @@ exports.handler = async event => {
   const client = new interactions.Client(
     process.env.TOKEN,
     process.env.ID,
-    process.env.GUILD_ID
   );
   const commands = [
     {
@@ -15,7 +14,7 @@ exports.handler = async event => {
   ]
 
   for (const command of commands) {
-    console.log(command);
+    console.log(process.env.TOKEN,process.env.ID,process.env.GUILD_ID);
     client.createCommand(command, process.env.GUILD_ID)
       .then(console.log)
       .catch(console.log);
