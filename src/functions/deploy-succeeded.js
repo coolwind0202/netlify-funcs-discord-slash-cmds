@@ -19,5 +19,5 @@ exports.handler = async event => {
       .catch(console.log);
   }
 
-  client.getCommands({guildID: process.env.GUILD_ID}).then(console.log);
+  client.getCommands({guildID: process.env.GUILD_ID}).then(console.log).catch(console.log);
 }
