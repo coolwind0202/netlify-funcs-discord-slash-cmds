@@ -4,18 +4,19 @@ exports.handler = async event => {
 
   const client = new interactions.Client(
     process.env.TOKEN,
-    process.env.ID
+    process.env.ID,
+    process.env.GUILD_ID
   );
   const commands = [
     {
       name: "hello",
-      description: "Hello! と返します"
+      description: "Hello! と返します",
     }
   ]
 
   for (const command of commands) {
-    client.createCommand(command)
+    client.createCommand(command, GUILD_ID)
       .then(console.log)
-      .catch(console.error);
+      .catch(console.log);
   }
 }

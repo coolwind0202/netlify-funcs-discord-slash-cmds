@@ -34,7 +34,7 @@ exports.handler = async event => {
         type: 1
       })
     };
-  } else if (body.type == 2) {
+  } else {
       /* typeが 2 のリクエストは実際のコマンド処理。返信内容などを返します */
       switch (body.data.name) {
         case "hello":
