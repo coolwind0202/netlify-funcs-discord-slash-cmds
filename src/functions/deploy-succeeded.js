@@ -13,11 +13,15 @@ exports.handler = async event => {
     }
   ]
 
+  /*
   for (const command of commands) {
     client.createCommand(command, process.env.GUILD_ID)
       .then(console.log)
       .catch(console.log);
   }
+  */
 
-  client.getCommands({guildID: process.env.GUILD_ID}).then(console.log).catch(console.log);
+  client.createCommand(commands[0], process.env.GUILD_ID).then(console.log).catch(console.error);
+
+  // client.getCommands({guildID: process.env.GUILD_ID}).then(console.log).catch(console.log);
 }
