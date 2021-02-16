@@ -4,9 +4,11 @@ exports.handler = async event => {
 
   const client = new interactions.Client(
     process.env.TOKEN,
-    process.env.ID,
+    process.env.CLIENT_ID,
     //"798835844572119070"
   );
+  console.log("769408235731157024" == process.env.GUILD_ID)
+  console.log("798835844572119070" == process.env.CLIENT_ID)
   const commands = [
     {
       name: "hello",
