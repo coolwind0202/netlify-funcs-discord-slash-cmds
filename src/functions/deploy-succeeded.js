@@ -20,13 +20,12 @@ exports.handler = async event => {
     }
   ]
 
-  for (const command of commands) {
-    client.createCommand(command, process.env.GUILD_ID)
-      .then(console.log)
-      .catch(console.error);
-  }
-  
-  client.getCommands({guildID: process.env.GUILD_ID}).then(console.log).catch(console.error);
+  Promise.all(commands.map(commandData => {
+    return client.createCommand(commandData, process.env.GUILD_ID)
+  })).then(console.log).catch(console.error);
 
-  return;
+  return {
+    headers: {},
+    statusCode: 200
+  };
 }
